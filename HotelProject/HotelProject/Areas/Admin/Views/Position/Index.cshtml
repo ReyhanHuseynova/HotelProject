@@ -10,7 +10,7 @@
     <div class="bg-light rounded h-100 p-4">
        
             <h6 class="mb-4">Position Table</h6>
-            <a  class="btn btn-primary">Create</a>
+            <a  asp-action="Create" class="btn btn-primary">Create</a>
       
        
         <table class="table">
@@ -39,14 +39,14 @@
                             }
                         </td>
                         <td>
-                            <a class="btn btn-warning">Update</a>
+                            <a asp-action="Update" class="btn btn-warning" asp-route-id="@item.Id">Update</a>
                             @if (item.IsDeactive)
                             {
-                                <a class="btn btn-danger">Activate</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Activate</a>
                             }
                             else
                             {
-                                <a class="btn btn-success">Deactivate</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-success">Deactivate</a>
                             }
 
                         </td>

@@ -10712,11 +10712,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ACER\\OneDrive\\İş masası\\HotelProject\\HotelProject\\HotelProject.csproj",
+      "projectUniqueName": "C:\\Users\\ACER\\OneDrive\\İş masası\\GitProjects\\HotelProject\\HotelProject\\HotelProject\\HotelProject.csproj",
       "projectName": "HotelProject",
-      "projectPath": "C:\\Users\\ACER\\OneDrive\\İş masası\\HotelProject\\HotelProject\\HotelProject.csproj",
+      "projectPath": "C:\\Users\\ACER\\OneDrive\\İş masası\\GitProjects\\HotelProject\\HotelProject\\HotelProject\\HotelProject.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ACER\\OneDrive\\İş masası\\HotelProject\\HotelProject\\obj\\",
+      "outputPath": "C:\\Users\\ACER\\OneDrive\\İş masası\\GitProjects\\HotelProject\\HotelProject\\HotelProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10733,8 +10733,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\ACER\\OneDrive\\İş masası\\HotelProject\\HotelProjectEntity\\HotelProjectEntity.csproj": {
-              "projectPath": "C:\\Users\\ACER\\OneDrive\\İş masası\\HotelProject\\HotelProjectEntity\\HotelProjectEntity.csproj"
+            "C:\\Users\\ACER\\OneDrive\\İş masası\\GitProjects\\HotelProject\\HotelProject\\HotelProjectEntity\\HotelProjectEntity.csproj": {
+              "projectPath": "C:\\Users\\ACER\\OneDrive\\İş masası\\GitProjects\\HotelProject\\HotelProject\\HotelProjectEntity\\HotelProjectEntity.csproj"
             }
           }
         }

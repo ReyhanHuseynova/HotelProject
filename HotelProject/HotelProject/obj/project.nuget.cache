@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fnX6H4ET7IM2xGE9qTvrcn7sR74aSr39Sp4nvWjRLdy6vbaMOBQAfYB3lOnfd1KcuiZhig8F8d2Vp/jQPmkNGg==",
+  "dgSpecHash": "cy6XOIXCEAnjcXJ1JNCMwUBR9zmmudTQyHuvuq6tqWCgHBtJbuIwhYxd3G7VWOXc/mTIociHmTlCNpBF6nabsQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ACER\\OneDrive\\İş masası\\HotelProject\\HotelProject\\HotelProject.csproj",
+  "projectFilePath": "C:\\Users\\ACER\\OneDrive\\İş masası\\GitProjects\\HotelProject\\HotelProject\\HotelProject\\HotelProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ACER\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
