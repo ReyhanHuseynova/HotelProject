@@ -1,0 +1,102 @@
+﻿@model List<Room>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div style="margin-top:40px" class="col-12">
+    <div class="bg-light rounded h-100 p-4">
+        <h6 class="mb-4">Service Table</h6>
+        <a asp-action="Create" class="btn btn-primary">Create</a>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Count</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Bed</th>
+                    <th scope="col">Bath</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Wifi</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                       
+                      
+                        <td>
+                            <img style="width:200px; height:100px; object-fit:cover" src="~/hotel/img/@item.Image">
+                        </td>
+                        <td>@item.Name</td>
+                        <td>@item.Count</td>
+                        <td>@item.Price</td>
+                        <td>@item.BedCount</td>
+                        <td>@item.BathCount</td>
+                        <td>@item.Description.Substring(0,item.Description.Length/4)</td>
+                        <td>
+                            @if (item.IsWifi)
+                            {
+                                <span class="text-danger">-</span>
+                            }
+                            else
+                            {
+                                <span class="text-success">+</span>
+                            }
+
+                        </td>
+                        <td>
+                            @if (item.IsDeactive)
+                            {
+                                <span class="text-danger">Passiv</span>
+                            }
+                            else
+                            {
+                                <span class="text-success">Activ</span>
+                            }
+
+                        </td>
+                        <td>
+                            <div class="d-flex justify-content-end">
+
+
+                                <div style="margin-right:5px">
+                                    <a asp-action="Update" class="btn btn-secondary" asp-route-id="@item.Id">Update</a>
+
+                                </div>
+
+                                @if (item.IsDeactive)
+                                {
+                                    <div>
+                                        <a asp-action="Delete" class="btn btn-success" asp-route-id="@item.Id">Delete</a>
+
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div>
+                                        <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.Id">Delete</a>
+
+                                    </div>
+                                }
+
+
+
+
+                            </div>
+
+
+                        </td>
+                    </tr>
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,68 @@
+﻿@model List<Team>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div style="margin-top:40px" class="col-12">
+    <div class="bg-light rounded h-100 p-4">
+
+        <h6 class="mb-4">Team Table</h6>
+        <a asp-action="Create" class="btn btn-primary">Create</a>
+
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">Social</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th scope="row">@item.Id</th>
+                        <td >
+                            <img style="width:200px; height:100px; object-fit:cover" src="~/hotel/img/@item.Image" />
+                        </td>
+                        <td>@item.FullName</td>
+                        <td>@item.Position.Name</td>
+                        <td>@item.Social.Name</td>
+                        <td>
+                            @if (item.IsDeactive)
+                            {
+                                <span class="text-danger">Passiv</span>
+                            }
+                            else
+                            {
+                                <span class="text-success">Activ</span>
+                            }
+                        </td>
+                        <td>
+                            <a asp-action="Update" class="btn btn-warning" asp-route-id="@item.Id">Update</a>
+                            @if (item.IsDeactive)
+                            {
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Activate</a>
+                            }
+                            else
+                            {
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-success">Deactivate</a>
+                            }
+
+                        </td>
+                    </tr>
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+

@@ -15,5 +15,6 @@ namespace HotelProject.DAL
         public DbSet<Service>Services { get; set; }
         public DbSet<Social>Socials { get; set; }
         public DbSet<Subscribe>Subscribes { get; set; }
+        public DbSet<Booking>Bookings { get; set; }
     }
 }

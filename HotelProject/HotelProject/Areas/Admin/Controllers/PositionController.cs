@@ -15,8 +15,8 @@ namespace HotelProject.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            List<Position> teams = await _db.Positions.ToListAsync();
-            return View(teams);
+            List<Position> p = await _db.Positions.ToListAsync();
+            return View(p);
         }
 
         public IActionResult Create()
@@ -28,8 +28,9 @@ namespace HotelProject.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View();
+                return View(p);
             }
+            p.CreateDate = DateTime.Now;
             await _db.Positions.AddAsync(p);
             await _db.SaveChangesAsync();
             return RedirectToAction("Index");
@@ -56,10 +57,10 @@ namespace HotelProject.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(Position p, int? id)
         {
-            //if (!ModelState.IsValid)
-            //{
-            //    return View();
-            //}
+            if (!ModelState.IsValid)
+            {
+                return View(p);
+            }
             if (id == null)
             {
                 return NotFound();
@@ -69,7 +70,10 @@ namespace HotelProject.Areas.Admin.Controllers
             {
                 return BadRequest();
             }
+
             dbposition.Name = p.Name;
+            dbposition.UpdateDate = p.UpdateDate;
+
             await _db.SaveChangesAsync();
             return RedirectToAction("Index");
         }

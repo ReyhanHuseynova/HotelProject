@@ -8,9 +8,8 @@ namespace HotelProjectEntity.Entity
 {
     public class Social:BaseModel
     {
-        public string Facebook { get; set; }
-        public string Instagram { get; set; }
-        public string Twitter { get; set; }
-        public List<Team> Teams { get; set; }
+        public string Name { get; set; }
+        
+        public List<Team>?Teams { get; set; }
     }
 }

@@ -1,0 +1,61 @@
+﻿@model Room
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div style="margin-top:40px;margin-left:30px" class="col-11">
+    <div class="bg-light rounded h-100 p-4">
+        <h6 class="mb-4">Room Create</h6>
+        <div asp-validation-summary="All" class="text text-danger"></div>
+        <form method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label asp-for="Photo" class="form-label"></label>
+                <input accept="image/*" asp-for="Photo" class="form-control">
+                <span asp-validation-for="Photo" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Count" class="form-label"></label>
+                <input asp-for="Count" class="form-control">
+                <span asp-validation-for="Count" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="BedCount" class="form-label"></label>
+                <input asp-for="BedCount" class="form-control">
+                <span asp-validation-for="BedCount" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="BathCount" class="form-label"></label>
+                <input asp-for="BathCount" class="form-control">
+                <span asp-validation-for="BathCount" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Price" class="form-label"></label>
+                <input asp-for="Price" class="form-control">
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+           
+
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+          
+
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+    </div>
+</div>
+
+
+
+

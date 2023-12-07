@@ -1,0 +1,78 @@
+﻿@model Booking
+<form method="post">
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input asp-for="Name" class="form-control" placeholder="Your Name">
+                <label asp-for="Name" for="name"></label>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input asp-for="Email" class="form-control" placeholder="Your Email">
+                <label asp-for="Email"></label>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating date" data-target-input="nearest">
+                <input asp-for="CheckIn" class="form-control datetimepicker-input" placeholder="Check In" data-target="#date3" data-toggle="datetimepicker" />
+                <label asp-for="CheckIn">Check In</label>
+                <span asp-validation-for="CheckIn" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating date" data-target-input="nearest">
+                <input asp-for="CheckOut" class="form-control datetimepicker-input" placeholder="Check Out" data-target="#date4" data-toggle="datetimepicker" />
+                <label asp-for="CheckOut" for="checkout"></label>
+                <span asp-validation-for="CheckOut" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <select class="form-select">
+                    <option value="1">Adult 1</option>
+                    <option value="2">Adult 2</option>
+                    <option value="3">Adult 3</option>
+                    <option value="4">Adult 4</option>
+                    <option value="5">Adult 5</option>
+                </select>
+                <label for="select1">Select Adult</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <select class="form-select">
+                    <option value="1">Child 1</option>
+                    <option value="2">Child 2</option>
+                    <option value="3">Child 3</option>
+                    <option value="4">Child 4</option>
+                    <option value="5">Child 5</option>
+                </select>
+                <label for="select2">Select Child</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-floating">
+                <select class="form-select" id="roomId">
+                    @foreach (var item in ViewBag.Room)
+                    {
+                         <option value="@item.Id">@item.Name</option> 
+                    }
+
+                </select>
+                <label >Select A Room</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-floating">
+                <textarea class="form-control" asp-for="Description" placeholder="Special Request" style="height: 100px"></textarea>
+                <label asp-for="Description">Special Request</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+        </div>
+    </div>
+</form>

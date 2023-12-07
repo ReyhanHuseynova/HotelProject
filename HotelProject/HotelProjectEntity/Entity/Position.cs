@@ -11,7 +11,7 @@ namespace HotelProjectEntity.Entity
     {
         [Required(ErrorMessage ="Name is required!")]
         public string Name { get; set; }
-        public List<Team> Teams { get; set; }
+        public List<Team>? Teams { get; set; }
 
 
     }
